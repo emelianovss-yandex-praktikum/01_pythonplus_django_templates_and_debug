@@ -5,6 +5,9 @@
             width: 720px;
             margin: 0 auto;
         }
+        .header {
+            color: darkred;
+        }
         .menu {
             margin-bottom: 32px;
         }
@@ -26,7 +29,7 @@
 
 <body>
     {% block content %}
-        <h3>{{ title }}</h3>
+        <h3 class="header">{{ title }}</h3>
         {% if username %}
             {% include 'posts/user_widget.html' %}
         {% endif %}

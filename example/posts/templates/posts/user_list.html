@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {{ block.super }}
     {% for object in objects %}
         {% with email=object.email username=object.username %}
         <div class="user">

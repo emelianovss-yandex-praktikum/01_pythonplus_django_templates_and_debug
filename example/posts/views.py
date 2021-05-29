@@ -28,6 +28,7 @@ def posts(request):
 
 def users(request):
     context = {
+        'title': 'Список пользователей',
         'objects': User.objects.all()
     }
     return render(request, 'posts/user_list.html', context)

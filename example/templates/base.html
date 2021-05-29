@@ -21,6 +21,8 @@
     </style>
 </head>
 
+<h1>{{ request.META.HTTP_USER_AGENT }} </h1>
+
 <div class="menu">
     <a href="{% url 'home' %}">Домой</a>
     <a href="{% url 'posts' %}">Посты</a>

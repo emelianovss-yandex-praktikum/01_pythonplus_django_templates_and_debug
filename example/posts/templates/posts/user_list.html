@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for object in objects %}
+        {% with email=object.email username=object.username %}
+        <div class="user">
+            {% include 'posts/user_widget.html' %}
+            <p>{{ object.first_name }}</p>
+            <p>{{ object.last_name }}</p>
+            <p>{{ object.profile.address }}</p>
+        </div>
+        {% endwith %}
+    {% endfor %}
+{% endblock %}

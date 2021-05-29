@@ -1,0 +1,34 @@
+<head>
+    <title>Example project</title>
+    <style>
+        body {
+            width: 720px;
+            margin: 0 auto;
+        }
+        .menu {
+            margin-bottom: 32px;
+        }
+        .post {
+            background: burlywood;
+            margin-bottom: 16px;
+        }
+        .user {
+            background: darkcyan;
+        }
+    </style>
+</head>
+
+<div class="menu">
+    <a href="{% url 'home' %}">Домой</a>
+    <a href="{% url 'posts' %}">Посты</a>
+    <a href="{% url 'users' %}">Пользователи</a>
+</div>
+
+<body>
+    {% block content %}
+        <h3>{{ title }}</h3>
+        {% if username %}
+            {% include 'posts/user_widget.html' %}
+        {% endif %}
+    {% endblock %}
+</body>

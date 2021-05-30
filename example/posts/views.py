@@ -21,6 +21,8 @@ def index(request):
 
 def posts(request):
     context = {
+        # 'objects': Post.objects.prefetch_related('user').all()
+        # 'objects': Post.objects.select_related('user').all()
         'objects': Post.objects.all()
     }
     return render(request, 'posts/index.html', context)
